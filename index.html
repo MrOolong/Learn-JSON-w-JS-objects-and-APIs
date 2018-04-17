@@ -3,6 +3,15 @@ JSON: JavaScript Object Notation
 <script type="text/javascript" src="">
     // create JS object
     var myObj = {"people":[{"firstName": "Laurence", "lastName": "Smith", "age":50}, {"firstName": "John", "lastName": "Jone", "age":50}]};
+    // add another piece to one of the objects "monthsknown"
+    myObj.people[1].monthsknown = "18";
+    
+    var strpeople = JSON.stringify(myObj);
+    console.log(strpeople);
+    
+    var myfriends = JSON.parse(strpeople);
+    console.log(myfriends);
+    
     console.log(myObj);
     document.getElementById('output').innerHTML = myObj.people[0].lastName + ' ' + myObj.people[1].firstName;
 </script>

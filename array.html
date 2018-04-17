@@ -1,0 +1,24 @@
+JSON: Javascript Object Notation
+
+<div id="output"></div>
+
+<script>
+
+    var friends = [];
+
+    friends[0] = "one";
+    friends[1] = "two";
+    
+    // stringify array
+    // var myjson = JSON.stringify(friends);
+    
+    // turn it back into JSON array
+    var myjson = JSON.parse(JSON.stringify(friends));
+    // adding the below does not work completely - just named values, not array values
+    myjson.first = "first";
+    
+    console.log(friends);
+    
+    console.log(myjson);
+
+</script>
